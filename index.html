@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Game</title>
+	<link rel="stylesheet" type="text/css" href="color.css">
+</head>
+<body>
+<!-- <div onclick="closed()"></div> -->
+<div class="jumbotron">	
+<h2>
+	How well do you know RGB?
+	<h2>
+	The Great
+	<br>Color Finder
+	<br>
+	<span id="colorDisplay">RGB</span>
+	<br>
+		<button class="mode" onclick = 'popUp()'>Instructions</button>
+        <div id="demo">
+
+    <div class="title">How to play the game
+	<button onclick="closed()"id="closed">&times;</button>
+	</div>
+See how well you know your RGB colors, match the colored square to the corresponding RGB numbers
+</div>
+<div id="overlay"></div>
+</div>
+</h2>
+</div>
+
+
+
+
+<div class="hero">
+<h1>
+</h1>
+</div>
+<div id="stripe">
+	<button id="reset">New Colors</button>
+
+	<span id="message"></span>
+	<button class="mode">Easy</button>
+	<button class="mode selected">Hard</button>
+</div>
+
+<div id="container">
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+</div>
+
+<script type="text/javascript" src="color.js"></script>
+</body>
+</html>
