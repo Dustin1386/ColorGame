@@ -53,8 +53,11 @@ for(var i = 0; i < squares.length; i++){
 	squares[i].addEventListener("click", function() {
 		//grab color of clicked squares
 		var clickedColor = this.style.background;
+		console.log(clickedColor,'clicked', pickedColor, 'picked')
+
 		//compare color to pickedColor
-		if(clickedColor === pickedColor) {
+		if(clickedColor == pickedColor) {
+			console.log('you win')
 			messageDisplay.textContent = "Correct!";
 			resetButton.textContent = "Play Again?";
 			changeColors(clickedColor);
@@ -97,7 +100,7 @@ function randomColor() {
 	var g = Math.floor(Math.random() * 256);
 	//pick a "blue" from 0 - 255
 	var b = Math.floor(Math.random() * 256);
-	return "RGB(" + r + ", " + g + ", " + b + ")";
+	return "rgb(" + r + ", " + g + ", " + b + ")";
 }
 function popUp(){
 	 document.getElementById('demo').style.display='block';
@@ -106,15 +109,3 @@ function popUp(){
 function closed(){
 	document.getElementById('demo').style.display='none';
 }
-
-
-// document.addEventListener("click", function(){
-//   document.getElementById("demo").style.display='none';
-// });
-// }function clickOff(){
-// 	document.addEventListener
-// }
-// window.onclick = function(event) {
-//   if (event.target == demo) {
-//     demo.style.display = "none";
-//   }
